@@ -63,7 +63,7 @@ public class Program {
 
     private static void newStatus(Soldier soldier) {
         if (soldier.getStatus() == Status.DECEASED) {
-            throw new SoldierException("The soldier has already death and can not come back to life");
+            throw new SoldierException("The soldier has already dead and can not come back to life");
         }
         soldier.setStatus(Status.DECEASED);
     }
@@ -129,6 +129,7 @@ public class Program {
             try{
                 switch (opc) {
                     case 1:
+                        sc.nextLine();
                         soldiers.add(insertSoldier());
                         break;
                     case 2:
